@@ -18,7 +18,7 @@ Download the source code from this repository or, preferably, use a git clone:
 	
 NOTE: Installing st-bruno will overwrite your existing st installation so make a backup of your current config if you need.
 
-Also, be sure to have a composite manager (`xcompmgr`, `picom`, `compton`, etc.) running if you want transparency.
+Also, be sure to have a composite manager (`xcompmgr`, `picom`, `compton`, etc.) running if you want transparency, and the `mononoki Nerd Font` to properly render stuff.
 
 # Small Note on Emojis and Special Characters
 
