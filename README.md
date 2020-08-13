@@ -17,3 +17,11 @@ Download the source code from this repository or, preferably, use a git clone:
     sudo make clean install
 	
 NOTE: Installing st-bruno will overwrite your existing st installation so make a backup of your current config if you need.
+
+Also, be sure to have a composite manager (`xcompmgr`, `picom`, `compton`, etc.) running if you want transparency.
+
+# Small Note on Emojis and Special Characters
+
+If st crashes when viewing emojis, install [libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra/) or [libxft-bgra-git](https://aur.archlinux.org/packages/libxft-bgra-git/) from the AUR.
+
+Note that some special characters may appear truncated if too wide. You might want to manually set your emoji/special character font to a lower size in the `config.h` file to avoid this.
