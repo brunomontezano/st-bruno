@@ -7,15 +7,15 @@
 /* See LICENSE file for copyright and license details. */
 /* appearance */
 
-/* Mononoki Nerd Font must be installed from AUR nerd-fonts-complete.
+/* Fantasque Sans Mono must be installed from standard Arch repo.
  * Otherwise, your default font will be Hack which is found in the standard
  * Arch repos and is listed as a dependency for this build. JoyPixels is also
  * a hard dependency and makes colored fonts and emojis possible.
  */
-static char *font = "Mononoki Nerd Font:pixelsize=14:antialias=true:autohint=true";
+static char *font = "Fantasque Sans Mono:pixelsize=17:antialias=true:autohint=true";
 static char *font2[] = {
-	"Hack:pixelsize=14:antialias=true:autohint=true",
-	"JoyPixels:pixelsize=14:antialias=true:autohint=true",
+	"Hack:pixelsize=15:antialias=true:autohint=true",
+	"JoyPixels:pixelsize=15:antialias=true:autohint=true",
 };
 static int borderpx = 2;
 
@@ -31,7 +31,7 @@ static char *shell = "/bin/sh";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
-/* identification sequence returned in DA and DECID */
+/* Identification sequence returned in DA and DECID */
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
@@ -39,45 +39,45 @@ static float cwscale = 1.0;
 static float chscale = 1.0;
 
 /*
- * word delimiter string
+ * Word delimiter string
  *
  * More advanced example: L" `'\"()[]{}"
  */
 wchar_t *worddelimiters = L" ";
 
-/* selection timeouts (in milliseconds) */
+/* Selection timeouts (in milliseconds) */
 static unsigned int doubleclicktimeout = 300;
 static unsigned int tripleclicktimeout = 600;
 
-/* alt screens */
+/* Alt screens */
 int allowaltscreen = 1;
 
-/* frames per second st should at maximum draw to the screen */
+/* Frames per second st should at maximum draw to the screen */
 static unsigned int xfps = 120;
 static unsigned int actionfps = 30;
 
 /*
- * blinking timeout (set to 0 to disable blinking) for the terminal blinking
+ * Blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
 static unsigned int blinktimeout = 800;
 
 /*
- * thickness of underline and bar cursors
+ * Thickness of underline and bar cursors
  */
 static unsigned int cursorthickness = 2;
 
 /*
- * bell volume. It must be a value between -100 and 100. Use 0 for disabling
+ * Bell volume. It must be a value between -100 and 100. Use 0 for disabling
  * it
  */
 static int bellvolume = 0;
 
-/* default TERM value */
+/* Default TERM value */
 char *termname = "st-256color";
 
 /*
- * spaces per tab
+ * Spaces per tab
  *
  * When you are changing this value, don't forget to adapt the »it« value in
  * the st.info and appropriately install the st.info in the environment where
@@ -93,12 +93,12 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* bg opacity 
+/* Background opacity 
  * 0xff is no transparency.
  * 0xee adds wee bit of transparency.
  * Play with the value to get desired transparency.
  */
-unsigned int alpha = 0xee; 
+unsigned int alpha = 0xff; 
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
