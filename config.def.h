@@ -12,7 +12,7 @@
  * Arch repos and is listed as a dependency for this build. JoyPixels is also
  * a hard dependency and makes colored fonts and emojis possible.
  */
-static char *font = "JetBrains Mono:pixelsize=17:antialias=true:autohint=true";
+static char *font = "FiraMono Nerd Font:pixelsize=17:antialias=true:autohint=true";
 static char *font2[] = {
 	"Hack:pixelsize=15:antialias=true:autohint=true",
 	"JoyPixels:pixelsize=15:antialias=true:autohint=true",
@@ -102,41 +102,39 @@ unsigned int alpha = 0xff;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#15161e", /* black   */
-	"#f7768e", /* red     */
-	"#9ece6a", /* green   */
-	"#e0af68", /* yellow  */
-	"#7aa2f7", /* blue    */
-	"#bb9af7", /* magenta */
-	"#7dcfff", /* cyan    */
-	"#a9b1d6", /* white   */
+    /* Normal colors */
+	[0]   = "#282828",
+	[1]   = "#cc241d",
+	[2]   = "#98971a",
+	[3]   = "#d79921",
+	[4]   = "#458588",
+	[5]   = "#b16286",
+	[6]   = "#689d6a",
+	[7]   = "#928374",
 
-	/* 8 bright colors */
-	"#414868", /* black   */
-	"#f7768e", /* red     */
-	"#9ece6a", /* green   */
-	"#e0af68", /* yellow  */
-	"#7aa2f7", /* blue    */
-	"#bb9af7", /* magenta */
-	"#7dcfff", /* cyan    */
-	"#c0caf5", /* white   */
+    /* Bright colors */
+	[8]   = "#3c3836",
+	[9]   = "#fb4934",
+	[10]  = "#b8bb26",
+	[11]  = "#fabd2f",
+	[12]  = "#83a598",
+	[13]  = "#d3869b",
+	[14]  = "#8ec07c",
+	[15]  = "#a89984",
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#1a1b26", /* background */
-	"#c0caf5", /* foreground */
- };
+    /* Foreground and background */
+	[256] = "#ebdbb2",
+	[257] = "#282828",
+};
  
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 256;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+static unsigned int defaultcs = 256;
+static unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
